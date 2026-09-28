@@ -1,0 +1,38 @@
+{
+  "resource_uri": "aura://quality-framework",
+  "resource_name": "AURA Contact Center Quality Evaluation Framework",
+  "version": "1.2.0",
+  "disclaimer": "Quality dimension scores are structured analytical signals intended for coaching and operational insight, not automated personnel decisions.",
+  "dimensions": [
+    {
+      "dimension_id": "next_step_clarity",
+      "name": "Next Step Clarity",
+      "description": "Evaluates whether the representative clearly communicated timelines, action items, confirmation references, and post-call expectations.",
+      "rating_scale": ["Strong", "Adequate", "Needs Improvement"]
+    },
+    {
+      "dimension_id": "control_of_the_call",
+      "name": "Control of the Call",
+      "description": "Assesses whether the representative guided the conversation structuredly, maintained focus, and prevented unnecessary circular dialogue.",
+      "rating_scale": ["Strong", "Adequate", "Needs Improvement"]
+    },
+    {
+      "dimension_id": "option_framing",
+      "name": "Option Framing",
+      "description": "Measures whether available self-service, payment, dispute, or account resolution options were presented accurately and constructively.",
+      "rating_scale": ["Strong", "Adequate", "Needs Improvement"]
+    },
+    {
+      "dimension_id": "objection_handling",
+      "name": "Objection Handling",
+      "description": "Evaluates how effectively the representative addressed customer pushback, fee questions, policy limits, or dissatisfaction using verified facts.",
+      "rating_scale": ["Strong", "Adequate", "Needs Improvement"]
+    },
+    {
+      "dimension_id": "empathy_and_tone",
+      "name": "Empathy and Tone",
+      "description": "Assesses professional warmth, active acknowledgment of customer frustration or distress, and respectful communication throughout the call.",
+      "rating_scale": ["Strong", "Adequate", "Needs Improvement"]
+    }
+  ]
+}

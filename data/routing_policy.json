@@ -1,0 +1,42 @@
+{
+  "policy_id": "ROUTING-POL-2026-01",
+  "policy_version": "2.0.0",
+  "policy_name": "AURA Governed Call Routing Policy",
+  "active": true,
+  "rules": {
+    "routine_complexity_range": [1, 2],
+    "borderline_complexity": 3,
+    "specialist_complexity_range": [4, 5],
+    "low_confidence_threshold": 0.72,
+    "borderline_confidence_threshold": 0.80,
+    "specialist_mandatory_flags": [
+      "dispute_flag",
+      "fraud_flag",
+      "compliance_flag",
+      "escalation_flag",
+      "threat_flag",
+      "self_harm_flag",
+      "customer_distress_flag"
+    ],
+    "borderline_specialist_flags": [
+      "repeat_contact_risk_flag",
+      "needs_deeper_analysis"
+    ],
+    "critical_risk_challenger_flags": [
+      "fraud_flag",
+      "compliance_flag",
+      "threat_flag",
+      "self_harm_flag"
+    ],
+    "safety_human_review_flags": [
+      "threat_flag",
+      "self_harm_flag"
+    ]
+  },
+  "descriptions": {
+    "routine_analysis": "Complexity 1 to 2 with medium/high confidence and no critical risk or mandatory specialist flags routes to Routine Analysis.",
+    "borderline_complexity_3": "Complexity 3 evaluates material flags, unresolved status, repeat-contact risk, and confidence to route to either Routine or Specialist Analysis.",
+    "specialist_analysis": "Complexity 4 to 5, low confidence, needs_deeper_analysis, or any dispute, fraud, compliance, escalation, threat, self-harm, or severe customer distress indicator triggers Specialist Analysis.",
+    "challenger_trigger": "Critical-risk flags (fraud, compliance, threat, self-harm), low specialist confidence, or forced challenger evaluation require independent Challenger validation."
+  }
+}

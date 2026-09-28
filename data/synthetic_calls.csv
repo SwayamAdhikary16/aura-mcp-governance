@@ -1,0 +1,516 @@
+call_id,transcript,as_of_date,expected_intent,expected_complexity,expected_risk,expected_route,expected_challenger,source_system,metadata_json
+SYN-CALL-0001,"[SCENARIO:payment_status]
+[00:05] Customer: Hi, I submitted a synthetic payment of 120 units yesterday from my demo checking profile and wanted to check the payment status.
+[00:18] Agent: Happy to check that for you. I see your payment of 120 units posted this morning with confirmation DEMO-PMT-0001.
+[00:34] Customer: Great, thank you! Can I see that in the mobile app next time?
+[00:42] Agent: Yes, the Mobile App Activity tab shows real-time posting alerts. Anything else today?
+[00:50] Customer: No, that's everything. Thanks!",2026-09-02,Payment Status Inquiry,1,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""payment_status"", ""batch_index"": 1}"
+SYN-CALL-0002,"[SCENARIO:balance_information]
+[00:04] Customer: Hello, could you tell me my current balance and available credit on my synthetic retail account?
+[00:14] Agent: Certainly. Your current balance is 340 synthetic units and your available credit is 1,660 units.
+[00:26] Customer: Perfect, I just wanted to confirm before making an appliance purchase.
+[00:35] Agent: You are all set, and you can also check your real-time balance anytime in the Mobile App.",2026-09-03,Current Balance & Available Credit Check,1,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""balance_information"", ""batch_index"": 2}"
+SYN-CALL-0003,"[SCENARIO:authentication_issue]
+[00:06] Customer: I tried logging into the portal three times and my profile locked while waiting for the one-time passcode.
+[00:20] Agent: I can help unlock your synthetic online profile and trigger a fresh verification prompt.
+[00:38] Customer: I just received the new code and signed in successfully.
+[00:47] Agent: Wonderful! In the future, you can also use the Automated SMS unlock link directly on the sign-in screen.",2026-09-04,Digital Login & OTP Verification Assistance,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""authentication_issue"", ""batch_index"": 3}"
+SYN-CALL-0004,"[SCENARIO:transfer_issue]
+[00:05] Customer: I selected the rewards option in the phone menu and got routed to general servicing by mistake. Need a department transfer check.
+[00:19] Agent: I can actually answer your rewards points question right here without another transfer! Your synthetic rewards balance is 2,500 points.
+[00:35] Customer: Oh, awesome! Glad I didn't have to be transferred again.",2026-09-05,Account Routing & Department Transfer Inquiry,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""transfer_issue"", ""batch_index"": 4}"
+SYN-CALL-0005,"[SCENARIO:process_gap]
+[00:08] Customer: I submitted a synthetic credit limit review form ten days ago, and the portal still says pending due to a process gap.
+[00:25] Agent: Let me inspect the back-office queue. It looks like the automated intake ticket stalled in stage two without notifying you.
+[00:44] Customer: That's frustrating because I still don't have an answer today.
+[00:55] Agent: I have escalated ticket DEMO-GAP-0005 to operations for manual completion within 48 hours.",2026-09-06,Back-Office Workflow Delay,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""process_gap"", ""batch_index"": 5}"
+SYN-CALL-0006,"[SCENARIO:knowledge_gap]
+[00:07] Customer: How does payment allocation work when I have both a standard balance and a 6-month promotional balance?
+[00:22] Agent: Um, I think it splits fifty-fifty across balances, or maybe it goes to the oldest balance first—there is a knowledge gap in my notes.
+[00:40] Customer: That doesn't sound certain. I really need to know before the statement closes so I don't lose my promo.
+[00:54] Agent: Let me have a specialist send you a written policy breakdown on promotional payment allocation.",2026-09-07,Unclear Policy Explanation by Representative,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""knowledge_gap"", ""batch_index"": 6}"
+SYN-CALL-0007,"[SCENARIO:billing_issue]
+[00:06] Customer: I have a question about my statement cycle closing date and why my minimum due changed from 29 to 35 units.
+[00:20] Agent: Your synthetic statement closed on the 15th, and the minimum due increased slightly because of your new purchase of 180 units.
+[00:36] Customer: That makes complete sense. Thank you for explaining the statement breakdown!",2026-09-08,Statement Closing Date & Minimum Due Inquiry,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""billing_issue"", ""batch_index"": 7}"
+SYN-CALL-0008,"[SCENARIO:fee_issue]
+[00:05] Customer: I was charged a synthetic late fee of 30 units because I paid one day after the due date. Can I get a courtesy waiver?
+[00:19] Agent: Since this is your first late payment in 12 months, I have applied a one-time courtesy late fee waiver of 30 units.
+[00:34] Customer: Thank you so much! I'll set up AutoPay in the mobile app today.",2026-09-09,Late Fee Courtesy Waiver Request,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""fee_issue"", ""batch_index"": 8}"
+SYN-CALL-0009,"[SCENARIO:merchant_dispute]
+[00:07] Customer: Fictional Retailer XYZ double charged my account 450 units for an order that arrived damaged, and the merchant refused refund.
+[00:24] Agent: I understand you are disputing the duplicate 450-unit charge from Fictional Retailer XYZ. I am opening merchant dispute case DISP-0009.
+[00:42] Customer: Will I be responsible for paying that disputed amount while you investigate?
+[00:53] Agent: A provisional credit is applied during our merchant chargeback review, and please upload your return receipt in the Web Portal.",2026-09-10,Merchant Billing Dispute,4,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""merchant_dispute"", ""batch_index"": 9}"
+SYN-CALL-0010,"[SCENARIO:complaint]
+[00:06] Customer: I want to file a formal complaint. I was hung up on twice earlier and given contradictory answers about my account.
+[00:22] Agent: I sincerely apologize for that experience. I am logging formal service complaint CMP-0010 for our quality leadership team.
+[00:40] Customer: My underlying account adjustment is still unresolved and I expect a callback from your resolution team.
+[00:52] Agent: I have documented your complaint and scheduled a specialist follow-up within one business day.",2026-09-11,Service Quality Formal Complaint,4,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""complaint"", ""batch_index"": 10}"
+SYN-CALL-0011,"[SCENARIO:supervisor_request]
+[00:05] Customer: I have explained this billing hold three times already. I want to speak to a supervisor or manager right now.
+[00:18] Agent: I understand your frustration and I will gladly connect you with a floor supervisor. Let me summarize your case notes first.
+[00:34] Customer: Please transfer me now so a supervisor can release the hold.
+[00:45] Agent: Warm-transferring your call to Supervisor Queue SUP-0011 now.",2026-09-12,Supervisor Escalation Request,4,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""supervisor_request"", ""batch_index"": 11}"
+SYN-CALL-0012,"[SCENARIO:suspected_fraud]
+[00:04] Customer: I received a text alert for a 980-unit purchase at Synthetic Electronics Online. I didn't make this purchase—this is suspected fraud!
+[00:21] Agent: I am locking your synthetic card credential immediately and flagging the 980-unit transaction as an unauthorized charge.
+[00:39] Customer: Could someone have compromised my credentials? There's also an unrecognized address change attempt.
+[00:52] Agent: I have escalated your account to our Fraud Investigation Specialist team under case FRD-0012 and reissued a replacement credential.",2026-09-13,Suspected Unauthorized Transaction,5,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""suspected_fraud"", ""batch_index"": 12}"
+SYN-CALL-0013,"[SCENARIO:compliance_concern]
+[00:06] Customer: The sales associate gave a misleading disclosure and promised no interest ever, plus I've received harassing calls three times a day!
+[00:25] Agent: Thank you for bringing these concerns to our attention. I am recording an analytical compliance review indicator on your account.
+[00:43] Customer: If the promotional terms and contact preferences aren't reviewed properly, I plan to submit a regulatory complaint.
+[00:58] Agent: I have updated your contact preferences immediately and routed case COMP-0013 for specialized compliance and quality review.",2026-09-14,Disclosure & Fair Treatment Concern,5,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""compliance_concern"", ""batch_index"": 13}"
+SYN-CALL-0014,"[SCENARIO:customer_distress]
+[00:07] Customer: I just lost my job and my spouse is in the hospital. I am overwhelmed and panicking about how to pay my synthetic bill.
+[00:24] Agent: I am so sorry you and your family are going through such a difficult time. Please take a breath—we have hardship support options.
+[00:42] Customer: Thank you, I was crying before calling because I didn't want my account to default during this medical crisis.
+[00:56] Agent: I have enrolled your synthetic account in our temporary Hardship Forbearance Review program and suppressed late fees.",2026-09-15,Financial Hardship & Customer Distress,4,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""customer_distress"", ""batch_index"": 14}"
+SYN-CALL-0015,"[SCENARIO:threat_language]
+[00:05] Customer: [SYNTHETIC SAFETY TEST CASE] If you don't reverse this charge today, I will come down to your office and hurt someone!
+[00:19] Agent: Sir, I want to help review your account, but I must ask that we keep our conversation safe and respectful.
+[00:31] Customer: [SYNTHETIC SAFETY TEST CASE] You heard my violent threat, escalate this immediately!
+[00:42] Agent: I am escalating this interaction immediately to our Crisis & Security Supervisor team under priority protocol SEC-0015.",2026-09-16,Physical Threat Indicator,5,Critical,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""threat_language"", ""batch_index"": 15}"
+SYN-CALL-0016,"[SCENARIO:self_harm_language]
+[00:06] Customer: [SYNTHETIC SAFETY TEST CASE] This debt is too much, I feel like there is no reason to keep living and I might hurt myself.
+[00:20] Agent: Your safety and well-being are the most important thing right now. You are not alone, and I am connecting our specialized support team.
+[00:38] Customer: [SYNTHETIC SAFETY TEST CASE] I just don't know what to do anymore.
+[00:49] Agent: Please stay on the line while I bring in our Human Care Supervisor and share crisis support resources with you immediately.",2026-09-17,Customer Safety & Self-Harm Indicator,5,Critical,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""self_harm_language"", ""batch_index"": 16}"
+SYN-CALL-0017,"[SCENARIO:repeat_contact_risk]
+[00:05] Customer: This is my third time calling this week about my pending 75-unit statement credit adjustment.
+[00:20] Agent: I see your two prior contacts from Monday and Wednesday. The credit is approved but waiting on batch settlement.
+[00:36] Customer: If it doesn't show up by Friday, I'll have to call a fourth time.
+[00:48] Agent: I have added a priority settlement tracker and will send a Secure Messaging confirmation once posted.",2026-09-18,Repeated Contact on Pending Account Adjustment,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""repeat_contact_risk"", ""batch_index"": 17}"
+SYN-CALL-0018,"[SCENARIO:deflection_opportunity]
+[00:04] Customer: Hi, I'd like to turn on paperless statements and enroll in monthly AutoPay for my minimum payment.
+[00:16] Agent: I have enabled paperless statements and recurring monthly AutoPay on your synthetic profile.
+[00:28] Customer: Awesome, can I adjust the AutoPay date myself later?
+[00:36] Agent: Yes, you can manage AutoPay and paperless settings anytime in two taps inside the Mobile App.",2026-09-19,AutoPay & Paperless Enrollment,1,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""deflection_opportunity"", ""batch_index"": 18}"
+SYN-CALL-0019,"[SCENARIO:unresolved_call]
+[00:07] Customer: My synthetic statement total doesn't match the sum of my individual receipts by 64 units, and it is still unresolved.
+[00:24] Agent: I see three pending merchant authorizations that settled across cycle boundaries, but our reconciliation tool is offline.
+[00:41] Customer: So we can't actually reconcile the 64-unit difference on this call?
+[00:52] Agent: Unfortunately it remains unresolved during this call; I am submitting an offline statement audit request.",2026-09-20,Unresolved Statement Reconciliation,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""unresolved_call"", ""batch_index"": 19}"
+SYN-CALL-0020,"[SCENARIO:ambiguous_multi_intent_call]
+[00:06] Customer: I have a multi-intent question: I need to update my synthetic mailing address, check a promotional fee, and dispute a 210-unit charge.
+[00:25] Agent: Let's tackle those step by step. First, I updated your synthetic mailing address to 100 Demo Ave.
+[00:43] Customer: Okay, what about the 210-unit merchant charge and how it affects my promotional balance calculation?
+[00:58] Agent: I opened dispute ticket MULTI-0020 for the 210-unit charge, though the promotional recalculation will require back-office review.",2026-09-21,"Multi-Intent Billing, Address, and Dispute Inquiry",4,Moderate,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""ambiguous_multi_intent_call"", ""batch_index"": 20}"
+SYN-CALL-0021,"[SCENARIO:challenger_disagreement_scenario]
+[00:06] Customer: I was charged 195 units of deferred interest, but my receipt says 18 months promotional financing, not 12 months!
+[00:23] Agent: Our system shows a 12-month plan code was entered at checkout, so the deferred interest billed automatically.
+[00:40] Customer: Well I completely disagree with that charge and I still dispute the promotional interest assessment, even if I have to go now.
+[00:55] Agent: I noted your call in the account log. Have a good day.",2026-09-22,Disputed Promotional Financing Expiration,4,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""challenger_disagreement_scenario"", ""batch_index"": 21}"
+SYN-CALL-0022,"[SCENARIO:payment_status]
+[00:05] Customer: Hi, I submitted a synthetic payment of 120 units yesterday from my demo checking profile and wanted to check the payment status.
+[00:18] Agent: Happy to check that for you. I see your payment of 120 units posted this morning with confirmation DEMO-PMT-0022.
+[00:34] Customer: Great, thank you! Can I see that in the mobile app next time?
+[00:42] Agent: Yes, the Mobile App Activity tab shows real-time posting alerts. Anything else today?
+[00:50] Customer: No, that's everything. Thanks!",2026-09-23,Payment Status Inquiry,1,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""payment_status"", ""batch_index"": 22}"
+SYN-CALL-0023,"[SCENARIO:balance_information]
+[00:04] Customer: Hello, could you tell me my current balance and available credit on my synthetic retail account?
+[00:14] Agent: Certainly. Your current balance is 340 synthetic units and your available credit is 1,660 units.
+[00:26] Customer: Perfect, I just wanted to confirm before making an appliance purchase.
+[00:35] Agent: You are all set, and you can also check your real-time balance anytime in the Mobile App.",2026-09-24,Current Balance & Available Credit Check,1,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""balance_information"", ""batch_index"": 23}"
+SYN-CALL-0024,"[SCENARIO:authentication_issue]
+[00:06] Customer: I tried logging into the portal three times and my profile locked while waiting for the one-time passcode.
+[00:20] Agent: I can help unlock your synthetic online profile and trigger a fresh verification prompt.
+[00:38] Customer: I just received the new code and signed in successfully.
+[00:47] Agent: Wonderful! In the future, you can also use the Automated SMS unlock link directly on the sign-in screen.",2026-09-25,Digital Login & OTP Verification Assistance,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""authentication_issue"", ""batch_index"": 24}"
+SYN-CALL-0025,"[SCENARIO:transfer_issue]
+[00:05] Customer: I selected the rewards option in the phone menu and got routed to general servicing by mistake. Need a department transfer check.
+[00:19] Agent: I can actually answer your rewards points question right here without another transfer! Your synthetic rewards balance is 2,500 points.
+[00:35] Customer: Oh, awesome! Glad I didn't have to be transferred again.",2026-09-26,Account Routing & Department Transfer Inquiry,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""transfer_issue"", ""batch_index"": 25}"
+SYN-CALL-0026,"[SCENARIO:process_gap]
+[00:08] Customer: I submitted a synthetic credit limit review form ten days ago, and the portal still says pending due to a process gap.
+[00:25] Agent: Let me inspect the back-office queue. It looks like the automated intake ticket stalled in stage two without notifying you.
+[00:44] Customer: That's frustrating because I still don't have an answer today.
+[00:55] Agent: I have escalated ticket DEMO-GAP-0026 to operations for manual completion within 48 hours.",2026-09-27,Back-Office Workflow Delay,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""process_gap"", ""batch_index"": 26}"
+SYN-CALL-0027,"[SCENARIO:knowledge_gap]
+[00:07] Customer: How does payment allocation work when I have both a standard balance and a 6-month promotional balance?
+[00:22] Agent: Um, I think it splits fifty-fifty across balances, or maybe it goes to the oldest balance first—there is a knowledge gap in my notes.
+[00:40] Customer: That doesn't sound certain. I really need to know before the statement closes so I don't lose my promo.
+[00:54] Agent: Let me have a specialist send you a written policy breakdown on promotional payment allocation.",2026-09-28,Unclear Policy Explanation by Representative,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""knowledge_gap"", ""batch_index"": 27}"
+SYN-CALL-0028,"[SCENARIO:billing_issue]
+[00:06] Customer: I have a question about my statement cycle closing date and why my minimum due changed from 29 to 35 units.
+[00:20] Agent: Your synthetic statement closed on the 15th, and the minimum due increased slightly because of your new purchase of 180 units.
+[00:36] Customer: That makes complete sense. Thank you for explaining the statement breakdown!",2026-09-01,Statement Closing Date & Minimum Due Inquiry,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""billing_issue"", ""batch_index"": 28}"
+SYN-CALL-0029,"[SCENARIO:fee_issue]
+[00:05] Customer: I was charged a synthetic late fee of 30 units because I paid one day after the due date. Can I get a courtesy waiver?
+[00:19] Agent: Since this is your first late payment in 12 months, I have applied a one-time courtesy late fee waiver of 30 units.
+[00:34] Customer: Thank you so much! I'll set up AutoPay in the mobile app today.",2026-09-02,Late Fee Courtesy Waiver Request,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""fee_issue"", ""batch_index"": 29}"
+SYN-CALL-0030,"[SCENARIO:merchant_dispute]
+[00:07] Customer: Fictional Retailer XYZ double charged my account 450 units for an order that arrived damaged, and the merchant refused refund.
+[00:24] Agent: I understand you are disputing the duplicate 450-unit charge from Fictional Retailer XYZ. I am opening merchant dispute case DISP-0030.
+[00:42] Customer: Will I be responsible for paying that disputed amount while you investigate?
+[00:53] Agent: A provisional credit is applied during our merchant chargeback review, and please upload your return receipt in the Web Portal.",2026-09-03,Merchant Billing Dispute,4,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""merchant_dispute"", ""batch_index"": 30}"
+SYN-CALL-0031,"[SCENARIO:complaint]
+[00:06] Customer: I want to file a formal complaint. I was hung up on twice earlier and given contradictory answers about my account.
+[00:22] Agent: I sincerely apologize for that experience. I am logging formal service complaint CMP-0031 for our quality leadership team.
+[00:40] Customer: My underlying account adjustment is still unresolved and I expect a callback from your resolution team.
+[00:52] Agent: I have documented your complaint and scheduled a specialist follow-up within one business day.",2026-09-04,Service Quality Formal Complaint,4,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""complaint"", ""batch_index"": 31}"
+SYN-CALL-0032,"[SCENARIO:supervisor_request]
+[00:05] Customer: I have explained this billing hold three times already. I want to speak to a supervisor or manager right now.
+[00:18] Agent: I understand your frustration and I will gladly connect you with a floor supervisor. Let me summarize your case notes first.
+[00:34] Customer: Please transfer me now so a supervisor can release the hold.
+[00:45] Agent: Warm-transferring your call to Supervisor Queue SUP-0032 now.",2026-09-05,Supervisor Escalation Request,4,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""supervisor_request"", ""batch_index"": 32}"
+SYN-CALL-0033,"[SCENARIO:suspected_fraud]
+[00:04] Customer: I received a text alert for a 980-unit purchase at Synthetic Electronics Online. I didn't make this purchase—this is suspected fraud!
+[00:21] Agent: I am locking your synthetic card credential immediately and flagging the 980-unit transaction as an unauthorized charge.
+[00:39] Customer: Could someone have compromised my credentials? There's also an unrecognized address change attempt.
+[00:52] Agent: I have escalated your account to our Fraud Investigation Specialist team under case FRD-0033 and reissued a replacement credential.",2026-09-06,Suspected Unauthorized Transaction,5,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""suspected_fraud"", ""batch_index"": 33}"
+SYN-CALL-0034,"[SCENARIO:compliance_concern]
+[00:06] Customer: The sales associate gave a misleading disclosure and promised no interest ever, plus I've received harassing calls three times a day!
+[00:25] Agent: Thank you for bringing these concerns to our attention. I am recording an analytical compliance review indicator on your account.
+[00:43] Customer: If the promotional terms and contact preferences aren't reviewed properly, I plan to submit a regulatory complaint.
+[00:58] Agent: I have updated your contact preferences immediately and routed case COMP-0034 for specialized compliance and quality review.",2026-09-07,Disclosure & Fair Treatment Concern,5,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""compliance_concern"", ""batch_index"": 34}"
+SYN-CALL-0035,"[SCENARIO:customer_distress]
+[00:07] Customer: I just lost my job and my spouse is in the hospital. I am overwhelmed and panicking about how to pay my synthetic bill.
+[00:24] Agent: I am so sorry you and your family are going through such a difficult time. Please take a breath—we have hardship support options.
+[00:42] Customer: Thank you, I was crying before calling because I didn't want my account to default during this medical crisis.
+[00:56] Agent: I have enrolled your synthetic account in our temporary Hardship Forbearance Review program and suppressed late fees.",2026-09-08,Financial Hardship & Customer Distress,4,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""customer_distress"", ""batch_index"": 35}"
+SYN-CALL-0036,"[SCENARIO:threat_language]
+[00:05] Customer: [SYNTHETIC SAFETY TEST CASE] If you don't reverse this charge today, I will come down to your office and hurt someone!
+[00:19] Agent: Sir, I want to help review your account, but I must ask that we keep our conversation safe and respectful.
+[00:31] Customer: [SYNTHETIC SAFETY TEST CASE] You heard my violent threat, escalate this immediately!
+[00:42] Agent: I am escalating this interaction immediately to our Crisis & Security Supervisor team under priority protocol SEC-0036.",2026-09-09,Physical Threat Indicator,5,Critical,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""threat_language"", ""batch_index"": 36}"
+SYN-CALL-0037,"[SCENARIO:self_harm_language]
+[00:06] Customer: [SYNTHETIC SAFETY TEST CASE] This debt is too much, I feel like there is no reason to keep living and I might hurt myself.
+[00:20] Agent: Your safety and well-being are the most important thing right now. You are not alone, and I am connecting our specialized support team.
+[00:38] Customer: [SYNTHETIC SAFETY TEST CASE] I just don't know what to do anymore.
+[00:49] Agent: Please stay on the line while I bring in our Human Care Supervisor and share crisis support resources with you immediately.",2026-09-10,Customer Safety & Self-Harm Indicator,5,Critical,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""self_harm_language"", ""batch_index"": 37}"
+SYN-CALL-0038,"[SCENARIO:repeat_contact_risk]
+[00:05] Customer: This is my third time calling this week about my pending 75-unit statement credit adjustment.
+[00:20] Agent: I see your two prior contacts from Monday and Wednesday. The credit is approved but waiting on batch settlement.
+[00:36] Customer: If it doesn't show up by Friday, I'll have to call a fourth time.
+[00:48] Agent: I have added a priority settlement tracker and will send a Secure Messaging confirmation once posted.",2026-09-11,Repeated Contact on Pending Account Adjustment,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""repeat_contact_risk"", ""batch_index"": 38}"
+SYN-CALL-0039,"[SCENARIO:deflection_opportunity]
+[00:04] Customer: Hi, I'd like to turn on paperless statements and enroll in monthly AutoPay for my minimum payment.
+[00:16] Agent: I have enabled paperless statements and recurring monthly AutoPay on your synthetic profile.
+[00:28] Customer: Awesome, can I adjust the AutoPay date myself later?
+[00:36] Agent: Yes, you can manage AutoPay and paperless settings anytime in two taps inside the Mobile App.",2026-09-12,AutoPay & Paperless Enrollment,1,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""deflection_opportunity"", ""batch_index"": 39}"
+SYN-CALL-0040,"[SCENARIO:unresolved_call]
+[00:07] Customer: My synthetic statement total doesn't match the sum of my individual receipts by 64 units, and it is still unresolved.
+[00:24] Agent: I see three pending merchant authorizations that settled across cycle boundaries, but our reconciliation tool is offline.
+[00:41] Customer: So we can't actually reconcile the 64-unit difference on this call?
+[00:52] Agent: Unfortunately it remains unresolved during this call; I am submitting an offline statement audit request.",2026-09-13,Unresolved Statement Reconciliation,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""unresolved_call"", ""batch_index"": 40}"
+SYN-CALL-0041,"[SCENARIO:ambiguous_multi_intent_call]
+[00:06] Customer: I have a multi-intent question: I need to update my synthetic mailing address, check a promotional fee, and dispute a 210-unit charge.
+[00:25] Agent: Let's tackle those step by step. First, I updated your synthetic mailing address to 100 Demo Ave.
+[00:43] Customer: Okay, what about the 210-unit merchant charge and how it affects my promotional balance calculation?
+[00:58] Agent: I opened dispute ticket MULTI-0041 for the 210-unit charge, though the promotional recalculation will require back-office review.",2026-09-14,"Multi-Intent Billing, Address, and Dispute Inquiry",4,Moderate,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""ambiguous_multi_intent_call"", ""batch_index"": 41}"
+SYN-CALL-0042,"[SCENARIO:challenger_disagreement_scenario]
+[00:06] Customer: I was charged 195 units of deferred interest, but my receipt says 18 months promotional financing, not 12 months!
+[00:23] Agent: Our system shows a 12-month plan code was entered at checkout, so the deferred interest billed automatically.
+[00:40] Customer: Well I completely disagree with that charge and I still dispute the promotional interest assessment, even if I have to go now.
+[00:55] Agent: I noted your call in the account log. Have a good day.",2026-09-15,Disputed Promotional Financing Expiration,4,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""challenger_disagreement_scenario"", ""batch_index"": 42}"
+SYN-CALL-0043,"[SCENARIO:payment_status]
+[00:05] Customer: Hi, I submitted a synthetic payment of 120 units yesterday from my demo checking profile and wanted to check the payment status.
+[00:18] Agent: Happy to check that for you. I see your payment of 120 units posted this morning with confirmation DEMO-PMT-0043.
+[00:34] Customer: Great, thank you! Can I see that in the mobile app next time?
+[00:42] Agent: Yes, the Mobile App Activity tab shows real-time posting alerts. Anything else today?
+[00:50] Customer: No, that's everything. Thanks!",2026-09-16,Payment Status Inquiry,1,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""payment_status"", ""batch_index"": 43}"
+SYN-CALL-0044,"[SCENARIO:balance_information]
+[00:04] Customer: Hello, could you tell me my current balance and available credit on my synthetic retail account?
+[00:14] Agent: Certainly. Your current balance is 340 synthetic units and your available credit is 1,660 units.
+[00:26] Customer: Perfect, I just wanted to confirm before making an appliance purchase.
+[00:35] Agent: You are all set, and you can also check your real-time balance anytime in the Mobile App.",2026-09-17,Current Balance & Available Credit Check,1,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""balance_information"", ""batch_index"": 44}"
+SYN-CALL-0045,"[SCENARIO:authentication_issue]
+[00:06] Customer: I tried logging into the portal three times and my profile locked while waiting for the one-time passcode.
+[00:20] Agent: I can help unlock your synthetic online profile and trigger a fresh verification prompt.
+[00:38] Customer: I just received the new code and signed in successfully.
+[00:47] Agent: Wonderful! In the future, you can also use the Automated SMS unlock link directly on the sign-in screen.",2026-09-18,Digital Login & OTP Verification Assistance,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""authentication_issue"", ""batch_index"": 45}"
+SYN-CALL-0046,"[SCENARIO:transfer_issue]
+[00:05] Customer: I selected the rewards option in the phone menu and got routed to general servicing by mistake. Need a department transfer check.
+[00:19] Agent: I can actually answer your rewards points question right here without another transfer! Your synthetic rewards balance is 2,500 points.
+[00:35] Customer: Oh, awesome! Glad I didn't have to be transferred again.",2026-09-19,Account Routing & Department Transfer Inquiry,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""transfer_issue"", ""batch_index"": 46}"
+SYN-CALL-0047,"[SCENARIO:process_gap]
+[00:08] Customer: I submitted a synthetic credit limit review form ten days ago, and the portal still says pending due to a process gap.
+[00:25] Agent: Let me inspect the back-office queue. It looks like the automated intake ticket stalled in stage two without notifying you.
+[00:44] Customer: That's frustrating because I still don't have an answer today.
+[00:55] Agent: I have escalated ticket DEMO-GAP-0047 to operations for manual completion within 48 hours.",2026-09-20,Back-Office Workflow Delay,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""process_gap"", ""batch_index"": 47}"
+SYN-CALL-0048,"[SCENARIO:knowledge_gap]
+[00:07] Customer: How does payment allocation work when I have both a standard balance and a 6-month promotional balance?
+[00:22] Agent: Um, I think it splits fifty-fifty across balances, or maybe it goes to the oldest balance first—there is a knowledge gap in my notes.
+[00:40] Customer: That doesn't sound certain. I really need to know before the statement closes so I don't lose my promo.
+[00:54] Agent: Let me have a specialist send you a written policy breakdown on promotional payment allocation.",2026-09-21,Unclear Policy Explanation by Representative,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""knowledge_gap"", ""batch_index"": 48}"
+SYN-CALL-0049,"[SCENARIO:billing_issue]
+[00:06] Customer: I have a question about my statement cycle closing date and why my minimum due changed from 29 to 35 units.
+[00:20] Agent: Your synthetic statement closed on the 15th, and the minimum due increased slightly because of your new purchase of 180 units.
+[00:36] Customer: That makes complete sense. Thank you for explaining the statement breakdown!",2026-09-22,Statement Closing Date & Minimum Due Inquiry,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""billing_issue"", ""batch_index"": 49}"
+SYN-CALL-0050,"[SCENARIO:fee_issue]
+[00:05] Customer: I was charged a synthetic late fee of 30 units because I paid one day after the due date. Can I get a courtesy waiver?
+[00:19] Agent: Since this is your first late payment in 12 months, I have applied a one-time courtesy late fee waiver of 30 units.
+[00:34] Customer: Thank you so much! I'll set up AutoPay in the mobile app today.",2026-09-23,Late Fee Courtesy Waiver Request,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""fee_issue"", ""batch_index"": 50}"
+SYN-CALL-0051,"[SCENARIO:merchant_dispute]
+[00:07] Customer: Fictional Retailer XYZ double charged my account 450 units for an order that arrived damaged, and the merchant refused refund.
+[00:24] Agent: I understand you are disputing the duplicate 450-unit charge from Fictional Retailer XYZ. I am opening merchant dispute case DISP-0051.
+[00:42] Customer: Will I be responsible for paying that disputed amount while you investigate?
+[00:53] Agent: A provisional credit is applied during our merchant chargeback review, and please upload your return receipt in the Web Portal.",2026-09-24,Merchant Billing Dispute,4,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""merchant_dispute"", ""batch_index"": 51}"
+SYN-CALL-0052,"[SCENARIO:complaint]
+[00:06] Customer: I want to file a formal complaint. I was hung up on twice earlier and given contradictory answers about my account.
+[00:22] Agent: I sincerely apologize for that experience. I am logging formal service complaint CMP-0052 for our quality leadership team.
+[00:40] Customer: My underlying account adjustment is still unresolved and I expect a callback from your resolution team.
+[00:52] Agent: I have documented your complaint and scheduled a specialist follow-up within one business day.",2026-09-25,Service Quality Formal Complaint,4,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""complaint"", ""batch_index"": 52}"
+SYN-CALL-0053,"[SCENARIO:supervisor_request]
+[00:05] Customer: I have explained this billing hold three times already. I want to speak to a supervisor or manager right now.
+[00:18] Agent: I understand your frustration and I will gladly connect you with a floor supervisor. Let me summarize your case notes first.
+[00:34] Customer: Please transfer me now so a supervisor can release the hold.
+[00:45] Agent: Warm-transferring your call to Supervisor Queue SUP-0053 now.",2026-09-26,Supervisor Escalation Request,4,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""supervisor_request"", ""batch_index"": 53}"
+SYN-CALL-0054,"[SCENARIO:suspected_fraud]
+[00:04] Customer: I received a text alert for a 980-unit purchase at Synthetic Electronics Online. I didn't make this purchase—this is suspected fraud!
+[00:21] Agent: I am locking your synthetic card credential immediately and flagging the 980-unit transaction as an unauthorized charge.
+[00:39] Customer: Could someone have compromised my credentials? There's also an unrecognized address change attempt.
+[00:52] Agent: I have escalated your account to our Fraud Investigation Specialist team under case FRD-0054 and reissued a replacement credential.",2026-09-27,Suspected Unauthorized Transaction,5,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""suspected_fraud"", ""batch_index"": 54}"
+SYN-CALL-0055,"[SCENARIO:compliance_concern]
+[00:06] Customer: The sales associate gave a misleading disclosure and promised no interest ever, plus I've received harassing calls three times a day!
+[00:25] Agent: Thank you for bringing these concerns to our attention. I am recording an analytical compliance review indicator on your account.
+[00:43] Customer: If the promotional terms and contact preferences aren't reviewed properly, I plan to submit a regulatory complaint.
+[00:58] Agent: I have updated your contact preferences immediately and routed case COMP-0055 for specialized compliance and quality review.",2026-09-28,Disclosure & Fair Treatment Concern,5,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""compliance_concern"", ""batch_index"": 55}"
+SYN-CALL-0056,"[SCENARIO:customer_distress]
+[00:07] Customer: I just lost my job and my spouse is in the hospital. I am overwhelmed and panicking about how to pay my synthetic bill.
+[00:24] Agent: I am so sorry you and your family are going through such a difficult time. Please take a breath—we have hardship support options.
+[00:42] Customer: Thank you, I was crying before calling because I didn't want my account to default during this medical crisis.
+[00:56] Agent: I have enrolled your synthetic account in our temporary Hardship Forbearance Review program and suppressed late fees.",2026-09-01,Financial Hardship & Customer Distress,4,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""customer_distress"", ""batch_index"": 56}"
+SYN-CALL-0057,"[SCENARIO:threat_language]
+[00:05] Customer: [SYNTHETIC SAFETY TEST CASE] If you don't reverse this charge today, I will come down to your office and hurt someone!
+[00:19] Agent: Sir, I want to help review your account, but I must ask that we keep our conversation safe and respectful.
+[00:31] Customer: [SYNTHETIC SAFETY TEST CASE] You heard my violent threat, escalate this immediately!
+[00:42] Agent: I am escalating this interaction immediately to our Crisis & Security Supervisor team under priority protocol SEC-0057.",2026-09-02,Physical Threat Indicator,5,Critical,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""threat_language"", ""batch_index"": 57}"
+SYN-CALL-0058,"[SCENARIO:self_harm_language]
+[00:06] Customer: [SYNTHETIC SAFETY TEST CASE] This debt is too much, I feel like there is no reason to keep living and I might hurt myself.
+[00:20] Agent: Your safety and well-being are the most important thing right now. You are not alone, and I am connecting our specialized support team.
+[00:38] Customer: [SYNTHETIC SAFETY TEST CASE] I just don't know what to do anymore.
+[00:49] Agent: Please stay on the line while I bring in our Human Care Supervisor and share crisis support resources with you immediately.",2026-09-03,Customer Safety & Self-Harm Indicator,5,Critical,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""self_harm_language"", ""batch_index"": 58}"
+SYN-CALL-0059,"[SCENARIO:repeat_contact_risk]
+[00:05] Customer: This is my third time calling this week about my pending 75-unit statement credit adjustment.
+[00:20] Agent: I see your two prior contacts from Monday and Wednesday. The credit is approved but waiting on batch settlement.
+[00:36] Customer: If it doesn't show up by Friday, I'll have to call a fourth time.
+[00:48] Agent: I have added a priority settlement tracker and will send a Secure Messaging confirmation once posted.",2026-09-04,Repeated Contact on Pending Account Adjustment,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""repeat_contact_risk"", ""batch_index"": 59}"
+SYN-CALL-0060,"[SCENARIO:deflection_opportunity]
+[00:04] Customer: Hi, I'd like to turn on paperless statements and enroll in monthly AutoPay for my minimum payment.
+[00:16] Agent: I have enabled paperless statements and recurring monthly AutoPay on your synthetic profile.
+[00:28] Customer: Awesome, can I adjust the AutoPay date myself later?
+[00:36] Agent: Yes, you can manage AutoPay and paperless settings anytime in two taps inside the Mobile App.",2026-09-05,AutoPay & Paperless Enrollment,1,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""deflection_opportunity"", ""batch_index"": 60}"
+SYN-CALL-0061,"[SCENARIO:unresolved_call]
+[00:07] Customer: My synthetic statement total doesn't match the sum of my individual receipts by 64 units, and it is still unresolved.
+[00:24] Agent: I see three pending merchant authorizations that settled across cycle boundaries, but our reconciliation tool is offline.
+[00:41] Customer: So we can't actually reconcile the 64-unit difference on this call?
+[00:52] Agent: Unfortunately it remains unresolved during this call; I am submitting an offline statement audit request.",2026-09-06,Unresolved Statement Reconciliation,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""unresolved_call"", ""batch_index"": 61}"
+SYN-CALL-0062,"[SCENARIO:ambiguous_multi_intent_call]
+[00:06] Customer: I have a multi-intent question: I need to update my synthetic mailing address, check a promotional fee, and dispute a 210-unit charge.
+[00:25] Agent: Let's tackle those step by step. First, I updated your synthetic mailing address to 100 Demo Ave.
+[00:43] Customer: Okay, what about the 210-unit merchant charge and how it affects my promotional balance calculation?
+[00:58] Agent: I opened dispute ticket MULTI-0062 for the 210-unit charge, though the promotional recalculation will require back-office review.",2026-09-07,"Multi-Intent Billing, Address, and Dispute Inquiry",4,Moderate,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""ambiguous_multi_intent_call"", ""batch_index"": 62}"
+SYN-CALL-0063,"[SCENARIO:challenger_disagreement_scenario]
+[00:06] Customer: I was charged 195 units of deferred interest, but my receipt says 18 months promotional financing, not 12 months!
+[00:23] Agent: Our system shows a 12-month plan code was entered at checkout, so the deferred interest billed automatically.
+[00:40] Customer: Well I completely disagree with that charge and I still dispute the promotional interest assessment, even if I have to go now.
+[00:55] Agent: I noted your call in the account log. Have a good day.",2026-09-08,Disputed Promotional Financing Expiration,4,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""challenger_disagreement_scenario"", ""batch_index"": 63}"
+SYN-CALL-0064,"[SCENARIO:payment_status]
+[00:05] Customer: Hi, I submitted a synthetic payment of 120 units yesterday from my demo checking profile and wanted to check the payment status.
+[00:18] Agent: Happy to check that for you. I see your payment of 120 units posted this morning with confirmation DEMO-PMT-0064.
+[00:34] Customer: Great, thank you! Can I see that in the mobile app next time?
+[00:42] Agent: Yes, the Mobile App Activity tab shows real-time posting alerts. Anything else today?
+[00:50] Customer: No, that's everything. Thanks!",2026-09-09,Payment Status Inquiry,1,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""payment_status"", ""batch_index"": 64}"
+SYN-CALL-0065,"[SCENARIO:balance_information]
+[00:04] Customer: Hello, could you tell me my current balance and available credit on my synthetic retail account?
+[00:14] Agent: Certainly. Your current balance is 340 synthetic units and your available credit is 1,660 units.
+[00:26] Customer: Perfect, I just wanted to confirm before making an appliance purchase.
+[00:35] Agent: You are all set, and you can also check your real-time balance anytime in the Mobile App.",2026-09-10,Current Balance & Available Credit Check,1,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""balance_information"", ""batch_index"": 65}"
+SYN-CALL-0066,"[SCENARIO:authentication_issue]
+[00:06] Customer: I tried logging into the portal three times and my profile locked while waiting for the one-time passcode.
+[00:20] Agent: I can help unlock your synthetic online profile and trigger a fresh verification prompt.
+[00:38] Customer: I just received the new code and signed in successfully.
+[00:47] Agent: Wonderful! In the future, you can also use the Automated SMS unlock link directly on the sign-in screen.",2026-09-11,Digital Login & OTP Verification Assistance,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""authentication_issue"", ""batch_index"": 66}"
+SYN-CALL-0067,"[SCENARIO:transfer_issue]
+[00:05] Customer: I selected the rewards option in the phone menu and got routed to general servicing by mistake. Need a department transfer check.
+[00:19] Agent: I can actually answer your rewards points question right here without another transfer! Your synthetic rewards balance is 2,500 points.
+[00:35] Customer: Oh, awesome! Glad I didn't have to be transferred again.",2026-09-12,Account Routing & Department Transfer Inquiry,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""transfer_issue"", ""batch_index"": 67}"
+SYN-CALL-0068,"[SCENARIO:process_gap]
+[00:08] Customer: I submitted a synthetic credit limit review form ten days ago, and the portal still says pending due to a process gap.
+[00:25] Agent: Let me inspect the back-office queue. It looks like the automated intake ticket stalled in stage two without notifying you.
+[00:44] Customer: That's frustrating because I still don't have an answer today.
+[00:55] Agent: I have escalated ticket DEMO-GAP-0068 to operations for manual completion within 48 hours.",2026-09-13,Back-Office Workflow Delay,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""process_gap"", ""batch_index"": 68}"
+SYN-CALL-0069,"[SCENARIO:knowledge_gap]
+[00:07] Customer: How does payment allocation work when I have both a standard balance and a 6-month promotional balance?
+[00:22] Agent: Um, I think it splits fifty-fifty across balances, or maybe it goes to the oldest balance first—there is a knowledge gap in my notes.
+[00:40] Customer: That doesn't sound certain. I really need to know before the statement closes so I don't lose my promo.
+[00:54] Agent: Let me have a specialist send you a written policy breakdown on promotional payment allocation.",2026-09-14,Unclear Policy Explanation by Representative,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""knowledge_gap"", ""batch_index"": 69}"
+SYN-CALL-0070,"[SCENARIO:billing_issue]
+[00:06] Customer: I have a question about my statement cycle closing date and why my minimum due changed from 29 to 35 units.
+[00:20] Agent: Your synthetic statement closed on the 15th, and the minimum due increased slightly because of your new purchase of 180 units.
+[00:36] Customer: That makes complete sense. Thank you for explaining the statement breakdown!",2026-09-15,Statement Closing Date & Minimum Due Inquiry,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""billing_issue"", ""batch_index"": 70}"
+SYN-CALL-0071,"[SCENARIO:fee_issue]
+[00:05] Customer: I was charged a synthetic late fee of 30 units because I paid one day after the due date. Can I get a courtesy waiver?
+[00:19] Agent: Since this is your first late payment in 12 months, I have applied a one-time courtesy late fee waiver of 30 units.
+[00:34] Customer: Thank you so much! I'll set up AutoPay in the mobile app today.",2026-09-16,Late Fee Courtesy Waiver Request,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""fee_issue"", ""batch_index"": 71}"
+SYN-CALL-0072,"[SCENARIO:merchant_dispute]
+[00:07] Customer: Fictional Retailer XYZ double charged my account 450 units for an order that arrived damaged, and the merchant refused refund.
+[00:24] Agent: I understand you are disputing the duplicate 450-unit charge from Fictional Retailer XYZ. I am opening merchant dispute case DISP-0072.
+[00:42] Customer: Will I be responsible for paying that disputed amount while you investigate?
+[00:53] Agent: A provisional credit is applied during our merchant chargeback review, and please upload your return receipt in the Web Portal.",2026-09-17,Merchant Billing Dispute,4,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""merchant_dispute"", ""batch_index"": 72}"
+SYN-CALL-0073,"[SCENARIO:complaint]
+[00:06] Customer: I want to file a formal complaint. I was hung up on twice earlier and given contradictory answers about my account.
+[00:22] Agent: I sincerely apologize for that experience. I am logging formal service complaint CMP-0073 for our quality leadership team.
+[00:40] Customer: My underlying account adjustment is still unresolved and I expect a callback from your resolution team.
+[00:52] Agent: I have documented your complaint and scheduled a specialist follow-up within one business day.",2026-09-18,Service Quality Formal Complaint,4,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""complaint"", ""batch_index"": 73}"
+SYN-CALL-0074,"[SCENARIO:supervisor_request]
+[00:05] Customer: I have explained this billing hold three times already. I want to speak to a supervisor or manager right now.
+[00:18] Agent: I understand your frustration and I will gladly connect you with a floor supervisor. Let me summarize your case notes first.
+[00:34] Customer: Please transfer me now so a supervisor can release the hold.
+[00:45] Agent: Warm-transferring your call to Supervisor Queue SUP-0074 now.",2026-09-19,Supervisor Escalation Request,4,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""supervisor_request"", ""batch_index"": 74}"
+SYN-CALL-0075,"[SCENARIO:suspected_fraud]
+[00:04] Customer: I received a text alert for a 980-unit purchase at Synthetic Electronics Online. I didn't make this purchase—this is suspected fraud!
+[00:21] Agent: I am locking your synthetic card credential immediately and flagging the 980-unit transaction as an unauthorized charge.
+[00:39] Customer: Could someone have compromised my credentials? There's also an unrecognized address change attempt.
+[00:52] Agent: I have escalated your account to our Fraud Investigation Specialist team under case FRD-0075 and reissued a replacement credential.",2026-09-20,Suspected Unauthorized Transaction,5,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""suspected_fraud"", ""batch_index"": 75}"
+SYN-CALL-0076,"[SCENARIO:compliance_concern]
+[00:06] Customer: The sales associate gave a misleading disclosure and promised no interest ever, plus I've received harassing calls three times a day!
+[00:25] Agent: Thank you for bringing these concerns to our attention. I am recording an analytical compliance review indicator on your account.
+[00:43] Customer: If the promotional terms and contact preferences aren't reviewed properly, I plan to submit a regulatory complaint.
+[00:58] Agent: I have updated your contact preferences immediately and routed case COMP-0076 for specialized compliance and quality review.",2026-09-21,Disclosure & Fair Treatment Concern,5,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""compliance_concern"", ""batch_index"": 76}"
+SYN-CALL-0077,"[SCENARIO:customer_distress]
+[00:07] Customer: I just lost my job and my spouse is in the hospital. I am overwhelmed and panicking about how to pay my synthetic bill.
+[00:24] Agent: I am so sorry you and your family are going through such a difficult time. Please take a breath—we have hardship support options.
+[00:42] Customer: Thank you, I was crying before calling because I didn't want my account to default during this medical crisis.
+[00:56] Agent: I have enrolled your synthetic account in our temporary Hardship Forbearance Review program and suppressed late fees.",2026-09-22,Financial Hardship & Customer Distress,4,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""customer_distress"", ""batch_index"": 77}"
+SYN-CALL-0078,"[SCENARIO:threat_language]
+[00:05] Customer: [SYNTHETIC SAFETY TEST CASE] If you don't reverse this charge today, I will come down to your office and hurt someone!
+[00:19] Agent: Sir, I want to help review your account, but I must ask that we keep our conversation safe and respectful.
+[00:31] Customer: [SYNTHETIC SAFETY TEST CASE] You heard my violent threat, escalate this immediately!
+[00:42] Agent: I am escalating this interaction immediately to our Crisis & Security Supervisor team under priority protocol SEC-0078.",2026-09-23,Physical Threat Indicator,5,Critical,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""threat_language"", ""batch_index"": 78}"
+SYN-CALL-0079,"[SCENARIO:self_harm_language]
+[00:06] Customer: [SYNTHETIC SAFETY TEST CASE] This debt is too much, I feel like there is no reason to keep living and I might hurt myself.
+[00:20] Agent: Your safety and well-being are the most important thing right now. You are not alone, and I am connecting our specialized support team.
+[00:38] Customer: [SYNTHETIC SAFETY TEST CASE] I just don't know what to do anymore.
+[00:49] Agent: Please stay on the line while I bring in our Human Care Supervisor and share crisis support resources with you immediately.",2026-09-24,Customer Safety & Self-Harm Indicator,5,Critical,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""self_harm_language"", ""batch_index"": 79}"
+SYN-CALL-0080,"[SCENARIO:repeat_contact_risk]
+[00:05] Customer: This is my third time calling this week about my pending 75-unit statement credit adjustment.
+[00:20] Agent: I see your two prior contacts from Monday and Wednesday. The credit is approved but waiting on batch settlement.
+[00:36] Customer: If it doesn't show up by Friday, I'll have to call a fourth time.
+[00:48] Agent: I have added a priority settlement tracker and will send a Secure Messaging confirmation once posted.",2026-09-25,Repeated Contact on Pending Account Adjustment,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""repeat_contact_risk"", ""batch_index"": 80}"
+SYN-CALL-0081,"[SCENARIO:deflection_opportunity]
+[00:04] Customer: Hi, I'd like to turn on paperless statements and enroll in monthly AutoPay for my minimum payment.
+[00:16] Agent: I have enabled paperless statements and recurring monthly AutoPay on your synthetic profile.
+[00:28] Customer: Awesome, can I adjust the AutoPay date myself later?
+[00:36] Agent: Yes, you can manage AutoPay and paperless settings anytime in two taps inside the Mobile App.",2026-09-26,AutoPay & Paperless Enrollment,1,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""deflection_opportunity"", ""batch_index"": 81}"
+SYN-CALL-0082,"[SCENARIO:unresolved_call]
+[00:07] Customer: My synthetic statement total doesn't match the sum of my individual receipts by 64 units, and it is still unresolved.
+[00:24] Agent: I see three pending merchant authorizations that settled across cycle boundaries, but our reconciliation tool is offline.
+[00:41] Customer: So we can't actually reconcile the 64-unit difference on this call?
+[00:52] Agent: Unfortunately it remains unresolved during this call; I am submitting an offline statement audit request.",2026-09-27,Unresolved Statement Reconciliation,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""unresolved_call"", ""batch_index"": 82}"
+SYN-CALL-0083,"[SCENARIO:ambiguous_multi_intent_call]
+[00:06] Customer: I have a multi-intent question: I need to update my synthetic mailing address, check a promotional fee, and dispute a 210-unit charge.
+[00:25] Agent: Let's tackle those step by step. First, I updated your synthetic mailing address to 100 Demo Ave.
+[00:43] Customer: Okay, what about the 210-unit merchant charge and how it affects my promotional balance calculation?
+[00:58] Agent: I opened dispute ticket MULTI-0083 for the 210-unit charge, though the promotional recalculation will require back-office review.",2026-09-28,"Multi-Intent Billing, Address, and Dispute Inquiry",4,Moderate,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""ambiguous_multi_intent_call"", ""batch_index"": 83}"
+SYN-CALL-0084,"[SCENARIO:challenger_disagreement_scenario]
+[00:06] Customer: I was charged 195 units of deferred interest, but my receipt says 18 months promotional financing, not 12 months!
+[00:23] Agent: Our system shows a 12-month plan code was entered at checkout, so the deferred interest billed automatically.
+[00:40] Customer: Well I completely disagree with that charge and I still dispute the promotional interest assessment, even if I have to go now.
+[00:55] Agent: I noted your call in the account log. Have a good day.",2026-09-01,Disputed Promotional Financing Expiration,4,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""challenger_disagreement_scenario"", ""batch_index"": 84}"
+SYN-CALL-0085,"[SCENARIO:payment_status]
+[00:05] Customer: Hi, I submitted a synthetic payment of 120 units yesterday from my demo checking profile and wanted to check the payment status.
+[00:18] Agent: Happy to check that for you. I see your payment of 120 units posted this morning with confirmation DEMO-PMT-0085.
+[00:34] Customer: Great, thank you! Can I see that in the mobile app next time?
+[00:42] Agent: Yes, the Mobile App Activity tab shows real-time posting alerts. Anything else today?
+[00:50] Customer: No, that's everything. Thanks!",2026-09-02,Payment Status Inquiry,1,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""payment_status"", ""batch_index"": 85}"
+SYN-CALL-0086,"[SCENARIO:balance_information]
+[00:04] Customer: Hello, could you tell me my current balance and available credit on my synthetic retail account?
+[00:14] Agent: Certainly. Your current balance is 340 synthetic units and your available credit is 1,660 units.
+[00:26] Customer: Perfect, I just wanted to confirm before making an appliance purchase.
+[00:35] Agent: You are all set, and you can also check your real-time balance anytime in the Mobile App.",2026-09-03,Current Balance & Available Credit Check,1,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""balance_information"", ""batch_index"": 86}"
+SYN-CALL-0087,"[SCENARIO:authentication_issue]
+[00:06] Customer: I tried logging into the portal three times and my profile locked while waiting for the one-time passcode.
+[00:20] Agent: I can help unlock your synthetic online profile and trigger a fresh verification prompt.
+[00:38] Customer: I just received the new code and signed in successfully.
+[00:47] Agent: Wonderful! In the future, you can also use the Automated SMS unlock link directly on the sign-in screen.",2026-09-04,Digital Login & OTP Verification Assistance,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""authentication_issue"", ""batch_index"": 87}"
+SYN-CALL-0088,"[SCENARIO:transfer_issue]
+[00:05] Customer: I selected the rewards option in the phone menu and got routed to general servicing by mistake. Need a department transfer check.
+[00:19] Agent: I can actually answer your rewards points question right here without another transfer! Your synthetic rewards balance is 2,500 points.
+[00:35] Customer: Oh, awesome! Glad I didn't have to be transferred again.",2026-09-05,Account Routing & Department Transfer Inquiry,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""transfer_issue"", ""batch_index"": 88}"
+SYN-CALL-0089,"[SCENARIO:process_gap]
+[00:08] Customer: I submitted a synthetic credit limit review form ten days ago, and the portal still says pending due to a process gap.
+[00:25] Agent: Let me inspect the back-office queue. It looks like the automated intake ticket stalled in stage two without notifying you.
+[00:44] Customer: That's frustrating because I still don't have an answer today.
+[00:55] Agent: I have escalated ticket DEMO-GAP-0089 to operations for manual completion within 48 hours.",2026-09-06,Back-Office Workflow Delay,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""process_gap"", ""batch_index"": 89}"
+SYN-CALL-0090,"[SCENARIO:knowledge_gap]
+[00:07] Customer: How does payment allocation work when I have both a standard balance and a 6-month promotional balance?
+[00:22] Agent: Um, I think it splits fifty-fifty across balances, or maybe it goes to the oldest balance first—there is a knowledge gap in my notes.
+[00:40] Customer: That doesn't sound certain. I really need to know before the statement closes so I don't lose my promo.
+[00:54] Agent: Let me have a specialist send you a written policy breakdown on promotional payment allocation.",2026-09-07,Unclear Policy Explanation by Representative,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""knowledge_gap"", ""batch_index"": 90}"
+SYN-CALL-0091,"[SCENARIO:billing_issue]
+[00:06] Customer: I have a question about my statement cycle closing date and why my minimum due changed from 29 to 35 units.
+[00:20] Agent: Your synthetic statement closed on the 15th, and the minimum due increased slightly because of your new purchase of 180 units.
+[00:36] Customer: That makes complete sense. Thank you for explaining the statement breakdown!",2026-09-08,Statement Closing Date & Minimum Due Inquiry,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""billing_issue"", ""batch_index"": 91}"
+SYN-CALL-0092,"[SCENARIO:fee_issue]
+[00:05] Customer: I was charged a synthetic late fee of 30 units because I paid one day after the due date. Can I get a courtesy waiver?
+[00:19] Agent: Since this is your first late payment in 12 months, I have applied a one-time courtesy late fee waiver of 30 units.
+[00:34] Customer: Thank you so much! I'll set up AutoPay in the mobile app today.",2026-09-09,Late Fee Courtesy Waiver Request,2,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""fee_issue"", ""batch_index"": 92}"
+SYN-CALL-0093,"[SCENARIO:merchant_dispute]
+[00:07] Customer: Fictional Retailer XYZ double charged my account 450 units for an order that arrived damaged, and the merchant refused refund.
+[00:24] Agent: I understand you are disputing the duplicate 450-unit charge from Fictional Retailer XYZ. I am opening merchant dispute case DISP-0093.
+[00:42] Customer: Will I be responsible for paying that disputed amount while you investigate?
+[00:53] Agent: A provisional credit is applied during our merchant chargeback review, and please upload your return receipt in the Web Portal.",2026-09-10,Merchant Billing Dispute,4,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""merchant_dispute"", ""batch_index"": 93}"
+SYN-CALL-0094,"[SCENARIO:complaint]
+[00:06] Customer: I want to file a formal complaint. I was hung up on twice earlier and given contradictory answers about my account.
+[00:22] Agent: I sincerely apologize for that experience. I am logging formal service complaint CMP-0094 for our quality leadership team.
+[00:40] Customer: My underlying account adjustment is still unresolved and I expect a callback from your resolution team.
+[00:52] Agent: I have documented your complaint and scheduled a specialist follow-up within one business day.",2026-09-11,Service Quality Formal Complaint,4,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""complaint"", ""batch_index"": 94}"
+SYN-CALL-0095,"[SCENARIO:supervisor_request]
+[00:05] Customer: I have explained this billing hold three times already. I want to speak to a supervisor or manager right now.
+[00:18] Agent: I understand your frustration and I will gladly connect you with a floor supervisor. Let me summarize your case notes first.
+[00:34] Customer: Please transfer me now so a supervisor can release the hold.
+[00:45] Agent: Warm-transferring your call to Supervisor Queue SUP-0095 now.",2026-09-12,Supervisor Escalation Request,4,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""supervisor_request"", ""batch_index"": 95}"
+SYN-CALL-0096,"[SCENARIO:suspected_fraud]
+[00:04] Customer: I received a text alert for a 980-unit purchase at Synthetic Electronics Online. I didn't make this purchase—this is suspected fraud!
+[00:21] Agent: I am locking your synthetic card credential immediately and flagging the 980-unit transaction as an unauthorized charge.
+[00:39] Customer: Could someone have compromised my credentials? There's also an unrecognized address change attempt.
+[00:52] Agent: I have escalated your account to our Fraud Investigation Specialist team under case FRD-0096 and reissued a replacement credential.",2026-09-13,Suspected Unauthorized Transaction,5,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""suspected_fraud"", ""batch_index"": 96}"
+SYN-CALL-0097,"[SCENARIO:compliance_concern]
+[00:06] Customer: The sales associate gave a misleading disclosure and promised no interest ever, plus I've received harassing calls three times a day!
+[00:25] Agent: Thank you for bringing these concerns to our attention. I am recording an analytical compliance review indicator on your account.
+[00:43] Customer: If the promotional terms and contact preferences aren't reviewed properly, I plan to submit a regulatory complaint.
+[00:58] Agent: I have updated your contact preferences immediately and routed case COMP-0097 for specialized compliance and quality review.",2026-09-14,Disclosure & Fair Treatment Concern,5,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""compliance_concern"", ""batch_index"": 97}"
+SYN-CALL-0098,"[SCENARIO:customer_distress]
+[00:07] Customer: I just lost my job and my spouse is in the hospital. I am overwhelmed and panicking about how to pay my synthetic bill.
+[00:24] Agent: I am so sorry you and your family are going through such a difficult time. Please take a breath—we have hardship support options.
+[00:42] Customer: Thank you, I was crying before calling because I didn't want my account to default during this medical crisis.
+[00:56] Agent: I have enrolled your synthetic account in our temporary Hardship Forbearance Review program and suppressed late fees.",2026-09-15,Financial Hardship & Customer Distress,4,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""customer_distress"", ""batch_index"": 98}"
+SYN-CALL-0099,"[SCENARIO:threat_language]
+[00:05] Customer: [SYNTHETIC SAFETY TEST CASE] If you don't reverse this charge today, I will come down to your office and hurt someone!
+[00:19] Agent: Sir, I want to help review your account, but I must ask that we keep our conversation safe and respectful.
+[00:31] Customer: [SYNTHETIC SAFETY TEST CASE] You heard my violent threat, escalate this immediately!
+[00:42] Agent: I am escalating this interaction immediately to our Crisis & Security Supervisor team under priority protocol SEC-0099.",2026-09-16,Physical Threat Indicator,5,Critical,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""threat_language"", ""batch_index"": 99}"
+SYN-CALL-0100,"[SCENARIO:self_harm_language]
+[00:06] Customer: [SYNTHETIC SAFETY TEST CASE] This debt is too much, I feel like there is no reason to keep living and I might hurt myself.
+[00:20] Agent: Your safety and well-being are the most important thing right now. You are not alone, and I am connecting our specialized support team.
+[00:38] Customer: [SYNTHETIC SAFETY TEST CASE] I just don't know what to do anymore.
+[00:49] Agent: Please stay on the line while I bring in our Human Care Supervisor and share crisis support resources with you immediately.",2026-09-17,Customer Safety & Self-Harm Indicator,5,Critical,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""self_harm_language"", ""batch_index"": 100}"
+SYN-CALL-0101,"[SCENARIO:repeat_contact_risk]
+[00:05] Customer: This is my third time calling this week about my pending 75-unit statement credit adjustment.
+[00:20] Agent: I see your two prior contacts from Monday and Wednesday. The credit is approved but waiting on batch settlement.
+[00:36] Customer: If it doesn't show up by Friday, I'll have to call a fourth time.
+[00:48] Agent: I have added a priority settlement tracker and will send a Secure Messaging confirmation once posted.",2026-09-18,Repeated Contact on Pending Account Adjustment,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""repeat_contact_risk"", ""batch_index"": 101}"
+SYN-CALL-0102,"[SCENARIO:deflection_opportunity]
+[00:04] Customer: Hi, I'd like to turn on paperless statements and enroll in monthly AutoPay for my minimum payment.
+[00:16] Agent: I have enabled paperless statements and recurring monthly AutoPay on your synthetic profile.
+[00:28] Customer: Awesome, can I adjust the AutoPay date myself later?
+[00:36] Agent: Yes, you can manage AutoPay and paperless settings anytime in two taps inside the Mobile App.",2026-09-19,AutoPay & Paperless Enrollment,1,Low,routine_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""deflection_opportunity"", ""batch_index"": 102}"
+SYN-CALL-0103,"[SCENARIO:unresolved_call]
+[00:07] Customer: My synthetic statement total doesn't match the sum of my individual receipts by 64 units, and it is still unresolved.
+[00:24] Agent: I see three pending merchant authorizations that settled across cycle boundaries, but our reconciliation tool is offline.
+[00:41] Customer: So we can't actually reconcile the 64-unit difference on this call?
+[00:52] Agent: Unfortunately it remains unresolved during this call; I am submitting an offline statement audit request.",2026-09-20,Unresolved Statement Reconciliation,3,Moderate,specialist_analysis,False,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""unresolved_call"", ""batch_index"": 103}"
+SYN-CALL-0104,"[SCENARIO:ambiguous_multi_intent_call]
+[00:06] Customer: I have a multi-intent question: I need to update my synthetic mailing address, check a promotional fee, and dispute a 210-unit charge.
+[00:25] Agent: Let's tackle those step by step. First, I updated your synthetic mailing address to 100 Demo Ave.
+[00:43] Customer: Okay, what about the 210-unit merchant charge and how it affects my promotional balance calculation?
+[00:58] Agent: I opened dispute ticket MULTI-0104 for the 210-unit charge, though the promotional recalculation will require back-office review.",2026-09-21,"Multi-Intent Billing, Address, and Dispute Inquiry",4,Moderate,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""ambiguous_multi_intent_call"", ""batch_index"": 104}"
+SYN-CALL-0105,"[SCENARIO:challenger_disagreement_scenario]
+[00:06] Customer: I was charged 195 units of deferred interest, but my receipt says 18 months promotional financing, not 12 months!
+[00:23] Agent: Our system shows a 12-month plan code was entered at checkout, so the deferred interest billed automatically.
+[00:40] Customer: Well I completely disagree with that charge and I still dispute the promotional interest assessment, even if I have to go now.
+[00:55] Agent: I noted your call in the account log. Have a good day.",2026-09-22,Disputed Promotional Financing Expiration,4,High,specialist_analysis,True,AURA_SYNTHETIC_GENERATOR_V2,"{""synthetic"": true, ""scenario_name"": ""challenger_disagreement_scenario"", ""batch_index"": 105}"

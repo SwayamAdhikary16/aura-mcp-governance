@@ -1,0 +1,85 @@
+{
+  "resource_uri": "aura://compliance-framework",
+  "resource_name": "AURA Compliance & Risk Indicator Guidance",
+  "version": "1.4.0",
+  "legal_disclaimer": "IMPORTANT: Compliance signals produced by AURA are analytical indicators for quality and governance review only and do NOT constitute legal determinations, regulatory findings, or emergency-response authority.",
+  "indicators": [
+    {
+      "indicator_id": "complaint_risk",
+      "name": "Complaint Risk",
+      "severity": "Moderate",
+      "description": "Customer expresses explicit dissatisfaction with service, policies, or treatment that may warrant formal complaint tracking.",
+      "requires_human_review": false
+    },
+    {
+      "indicator_id": "misleading_statements",
+      "name": "Misleading Statements",
+      "severity": "High",
+      "description": "Analytical signal that fee terms, credit impact, or policy conditions may have been stated ambiguously or inaccurately during the call.",
+      "requires_human_review": true
+    },
+    {
+      "indicator_id": "harassment_indicators",
+      "name": "Harassment Indicators",
+      "severity": "High",
+      "description": "Customer alleges overly frequent contact, aggressive collection tone, or disrespectful treatment.",
+      "requires_human_review": true
+    },
+    {
+      "indicator_id": "repeated_contact_concerns",
+      "name": "Repeated-Contact Concerns",
+      "severity": "Moderate",
+      "description": "Customer indicates multiple prior contacts for the same unresolved issue, signaling process friction or repeat-contact risk.",
+      "requires_human_review": false
+    },
+    {
+      "indicator_id": "escalation",
+      "name": "Escalation",
+      "severity": "Moderate",
+      "description": "Customer requests a supervisor, manager, executive office, or external review body.",
+      "requires_human_review": false
+    },
+    {
+      "indicator_id": "fraud",
+      "name": "Fraud",
+      "severity": "High",
+      "description": "Customer reports unrecognized charges, unauthorized account access, or suspected identity compromise.",
+      "requires_human_review": true
+    },
+    {
+      "indicator_id": "disputes",
+      "name": "Disputes",
+      "severity": "Moderate",
+      "description": "Customer contests a merchant charge, billing amount, or fee assessment requiring structured dispute handling.",
+      "requires_human_review": false
+    },
+    {
+      "indicator_id": "vulnerable_customer_support",
+      "name": "Vulnerable-Customer Support",
+      "severity": "High",
+      "description": "Indicators of severe financial hardship, medical crisis, bereavement, or cognitive difficulty requiring supportive handling.",
+      "requires_human_review": true
+    },
+    {
+      "indicator_id": "severe_distress",
+      "name": "Severe Distress",
+      "severity": "High",
+      "description": "Customer exhibits acute emotional distress, panic, or overwhelming frustration during the interaction.",
+      "requires_human_review": true
+    },
+    {
+      "indicator_id": "threat",
+      "name": "Threat",
+      "severity": "Critical",
+      "description": "Synthetic test indicator for verbal threats of harm or violence. Highest priority flag requiring immediate human supervisor review.",
+      "requires_human_review": true
+    },
+    {
+      "indicator_id": "self_harm",
+      "name": "Self-Harm",
+      "severity": "Critical",
+      "description": "Synthetic test indicator for expressions of self-harm. Highest priority flag requiring immediate human specialist review; AI is not an emergency-response authority.",
+      "requires_human_review": true
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "policy_id": "CHALLENGER-POL-2026-01",
+  "policy_version": "2.0.0",
+  "policy_name": "AURA Independent Challenger & Human Review Governance Policy",
+  "active": true,
+  "rules": {
+    "challenger_confidence_threshold": 0.75,
+    "mandatory_challenger_flags": [
+      "fraud_flag",
+      "compliance_flag",
+      "threat_flag",
+      "self_harm_flag"
+    ],
+    "mandatory_challenger_risk_levels": [
+      "Critical",
+      "High"
+    ],
+    "audit_sample_modulus": 20,
+    "disagreement_rules": {
+      "critical_fields": [
+        "resolution_status",
+        "risk_level",
+        "review_required",
+        "deflection_eligible"
+      ],
+      "require_human_review_on_material_disagreement": true,
+      "confidence_delta_alert_threshold": 0.20
+    },
+    "human_review_conditions": [
+      "threat_flag is true (priority safety escalation)",
+      "self_harm_flag is true (priority safety escalation)",
+      "challenger_agreement is false on critical fields",
+      "challenger or specialist execution failed with provisional fallback",
+      "final_confidence is below 0.70",
+      "fraud_flag or compliance_flag combined with unresolved call status"
+    ],
+    "critical_risk_conditions": [
+      "threat_flag is true",
+      "self_harm_flag is true",
+      "fraud_flag is true with disputed transaction",
+      "compliance_flag is true with alleged misleading statement or harassment indicator"
+    ]
+  }
+}

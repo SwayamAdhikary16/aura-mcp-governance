@@ -1,0 +1,114 @@
+{
+  "catalog_version": "2026.09.1",
+  "models": [
+    {
+      "model_id": "AURA_FAST",
+      "model_name": "AURA Fast Triage Model",
+      "model_version": "2.1.0",
+      "model_role": "First-pass triage",
+      "capabilities": [
+        "Summary",
+        "Intent detection",
+        "Complexity assessment",
+        "Basic risk detection",
+        "Sentiment progression",
+        "Interaction-origin detection",
+        "Deflection screening"
+      ],
+      "cost_tier": "Low",
+      "latency_tier": "Fast",
+      "maximum_complexity": 2,
+      "approval_status": "Approved",
+      "enabled": true,
+      "effective_from": "2026-01-01T00:00:00Z",
+      "effective_to": null
+    },
+    {
+      "model_id": "AURA_DEEP",
+      "model_name": "AURA Deep Specialist Model",
+      "model_version": "3.4.0",
+      "model_role": "Specialist analysis",
+      "capabilities": [
+        "Complaint analysis",
+        "Dispute analysis",
+        "Fraud analysis",
+        "Compliance analysis",
+        "Quality analysis",
+        "Resolution analysis",
+        "Process-gap analysis",
+        "Contact-reduction analysis"
+      ],
+      "cost_tier": "Premium",
+      "latency_tier": "Moderate",
+      "maximum_complexity": 5,
+      "approval_status": "Approved",
+      "enabled": true,
+      "effective_from": "2026-01-01T00:00:00Z",
+      "effective_to": null
+    },
+    {
+      "model_id": "AURA_CHALLENGER",
+      "model_name": "AURA Independent Challenger Validator",
+      "model_version": "1.9.0",
+      "model_role": "Independent validation",
+      "capabilities": [
+        "Independent decision review",
+        "Resolution challenge",
+        "Escalation challenge",
+        "Sentiment challenge",
+        "Interaction-origin challenge",
+        "Agent-performance challenge",
+        "Deflection challenge",
+        "Disagreement analysis"
+      ],
+      "cost_tier": "Premium",
+      "latency_tier": "Moderate",
+      "maximum_complexity": 5,
+      "approval_status": "Evaluation",
+      "enabled": true,
+      "effective_from": "2026-03-01T00:00:00Z",
+      "effective_to": null
+    },
+    {
+      "model_id": "AURA_CANDIDATE_V2",
+      "model_name": "AURA Next-Gen Candidate Model",
+      "model_version": "4.0.0-rc2",
+      "model_role": "Candidate evaluation",
+      "capabilities": [
+        "Summary",
+        "Intent detection",
+        "Complexity assessment",
+        "Complaint analysis",
+        "Dispute analysis",
+        "Fraud analysis",
+        "Compliance analysis",
+        "Quality analysis",
+        "Resolution analysis"
+      ],
+      "cost_tier": "Moderate",
+      "latency_tier": "Fast",
+      "maximum_complexity": 5,
+      "approval_status": "Shadow_Testing",
+      "enabled": true,
+      "effective_from": "2026-08-01T00:00:00Z",
+      "effective_to": null
+    },
+    {
+      "model_id": "AURA_LEGACY_DISABLED",
+      "model_name": "AURA Legacy Triage v1 (Retired)",
+      "model_version": "1.0.0",
+      "model_role": "Retired triage",
+      "capabilities": [
+        "Summary",
+        "Intent detection"
+      ],
+      "cost_tier": "Low",
+      "latency_tier": "Fast",
+      "maximum_complexity": 2,
+      "approval_status": "Retired",
+      "enabled": false,
+      "effective_from": "2025-01-01T00:00:00Z",
+      "effective_to": "2025-12-31T23:59:59Z"
+    }
+  ]
+}
