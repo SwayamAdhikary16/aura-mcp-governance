@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/eqa_analytics_logo.png" alt="EQA Analytics" width="240" />
+</p>
+
 # AURA — AI Unified Review Assistant
 
 **MCP 2.0-Native AI Review Governance and Orchestration Platform for Customer-Call Transcripts**
@@ -186,3 +190,7 @@ PYTHONPATH=src:. python -m unittest discover -s tests -v
 
 - **Enterprise LLM Connection Guide**: [`docs/LLM_CONNECTION_GUIDE.md`](docs/LLM_CONNECTION_GUIDE.md) (Synchrony Kong AI Gateway, Amazon Bedrock, Azure OpenAI, JSON repair, and mock fallback)
 - **5-Minute Hackathon Judging Demo Script**: [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md)
+
+
+---
+**Built by EQA Analytics** — *Enterprise Quality & Governed AI Analytics*
