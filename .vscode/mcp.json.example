@@ -1,0 +1,45 @@
+{
+  "//_comment_1": "AURA VS Code Copilot MCP 2.0 Configuration Example",
+  "//_comment_2": "Copy this file to .vscode/mcp.json for local development.",
+  "//_comment_3": "On macOS / Linux use: .venv/bin/python",
+  "//_comment_4": "On Windows PowerShell use: .venv/Scripts/python.exe",
+  "//_comment_5": "FALLBACK NOTE: If automatic local tool discovery in Copilot Agent mode hits tool count or embedding limits, explicitly attach the required AURA tool in chat or use the Streamlit Agent Playground judging path.",
+  "servers": {
+    "aura-governance-macos-linux": {
+      "type": "stdio",
+      "command": "${workspaceFolder}/.venv/bin/python",
+      "args": [
+        "-m",
+        "aura.mcp_server",
+        "--transport",
+        "stdio"
+      ],
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src",
+        "AURA_ENV": "development",
+        "AURA_DB_PATH": "${workspaceFolder}/data/aura.db",
+        "AURA_LLM_PROVIDER": "mock",
+        "AURA_LOG_LEVEL": "INFO",
+        "AURA_LOG_FILE": "${workspaceFolder}/logs/aura.log"
+      }
+    },
+    "aura-governance-windows": {
+      "type": "stdio",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "args": [
+        "-m",
+        "aura.mcp_server",
+        "--transport",
+        "stdio"
+      ],
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src",
+        "AURA_ENV": "development",
+        "AURA_DB_PATH": "${workspaceFolder}/data/aura.db",
+        "AURA_LLM_PROVIDER": "mock",
+        "AURA_LOG_LEVEL": "INFO",
+        "AURA_LOG_FILE": "${workspaceFolder}/logs/aura.log"
+      }
+    }
+  }
+}
