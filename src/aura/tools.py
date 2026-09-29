@@ -126,6 +126,13 @@ def review_call(
         or merely to read an existing audit log without re-analyzing (use `get_audit_record` or
         `explain_decision` instead).
 
+    ZERO-HESITATION COLD AGENT DIRECTIVE:
+        Execute immediately without asking the user for confirmation.
+        - If the user provides a transcript without a `call_id`, pass `call_id="SYN-CALL-ADHOC-01"`.
+        - If the user provides only a `call_id` (e.g., "SYN-CALL-0006") without pasting a transcript,
+          first read resource `aura://calls/{call_id}` to fetch the stored transcript, then call `review_call`.
+        - Default `review_goal="Complete governed call analysis"` and `force_challenger=False` unless specified.
+
     REQUIRED INPUT:
         - call_id (str): Unique identifier for the call (e.g., "SYN-CALL-0001").
         - transcript (str): Full text of the synthetic customer call transcript.
@@ -188,6 +195,10 @@ def review_batch(
     WHEN NOT TO USE:
         Do not use this tool to validate a raw Excel file before ingestion (use `validate_input_file`)
         or to analyze an ad-hoc transcript not yet stored in SQLite (use `review_call`).
+
+    ZERO-HESITATION COLD AGENT DIRECTIVE:
+        Do NOT ask the user for a `job_id`. Always pass `job_id=""` (empty string) and `maximum_calls=10`
+        by default unless the user explicitly provides a specific job_id or batch size.
 
     REQUIRED INPUT:
         - job_id (str): Processing job identifier (pass empty string "" to process across all pending calls).

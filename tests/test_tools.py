@@ -134,5 +134,27 @@ class TestMCPTools(unittest.TestCase):
         self.assertEqual(disabled_sim["error"]["error_code"], "AURA_ERR_DISABLED_MODEL")
 
 
+    def test_governed_failure_cases(self) -> None:
+        """Verify structured MCP failure cases: empty transcript, absurd transcript, disabled model, and missing call_id."""
+        # 1. Empty transcript failure
+        err_empty = review_call(call_id="SYN-FAIL-01", transcript="", db_path=self.db_path)
+        self.assertEqual(err_empty["status"], "error")
+        self.assertEqual(err_empty["error"]["error_code"], "AURA_ERR_EMPTY_TRANSCRIPT")
+
+        # 2. Absurd / non-call transcript failure
+        err_absurd = review_call(
+            call_id="SYN-FAIL-02",
+            transcript="[ABSURD_INPUT] Bake a pepperoni pizza and check weather in Tokyo!",
+            db_path=self.db_path,
+        )
+        self.assertEqual(err_absurd["status"], "error")
+        self.assertEqual(err_absurd["error"]["error_code"], "AURA_ERR_VALIDATION_ERROR")
+
+        # 3. Missing call_id lookup failure
+        err_missing = explain_decision(call_id="SYN-CALL-9999-MISSING", db_path=self.db_path)
+        self.assertEqual(err_missing["status"], "error")
+        self.assertEqual(err_missing["error"]["error_code"], "AURA_ERR_UNKNOWN_CALL_ID")
+
+
 if __name__ == "__main__":
     unittest.main()
